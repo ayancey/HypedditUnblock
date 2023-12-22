@@ -5,6 +5,9 @@ import json
 import mimetypes
 from io import BytesIO
 
+mimetypes.init(files=["/etc/mime.types"])
+
+
 app = Flask(__name__)
 
 s = requests.session()
