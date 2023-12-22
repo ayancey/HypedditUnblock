@@ -37,10 +37,12 @@ def hypeddit_grab():
     if "Content-Type" not in r.headers:
         return f"idk what to do: {json.dumps(r.headers)}"
 
-    guessed_extension = mimetypes.guess_extension(r.headers["Content-Type"])
+    if r.headers["Content-Type"] == "audio/wav":
+        guessed_extension = ".wav"
+    else:
+        guessed_extension = mimetypes.guess_extension(r.headers["Content-Type"])
 
     print(guessed_extension)
-
 
     # Use BytesIO instead of StringIO here.
     buffer = BytesIO()
