@@ -1,4 +1,4 @@
-FROM tiangolo/uvicorn-gunicorn:python3.11
+FROM tiangolo/uwsgi-nginx-flask:python3.11
 
 COPY ./requirements.txt /app/requirements.txt
 
