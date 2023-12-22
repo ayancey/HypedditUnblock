@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex's Funny Downloader</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <script>
+        function go_download() {
+            window.location.replace("/download?url=" + document.querySelector("input#url").value);
+        }
+    </script>
+</head>
+<body>
+<main>
+    <p>
+        <input type="url" id="url" name="downloader_url" placeholder="Hypeddit URL" style="width:100%;"><br>
+        <button type="button" style="margin:0 auto;display:block;" onclick="go_download()">Download</button>
+    </p>
+</main>
+</body>
+</html>
